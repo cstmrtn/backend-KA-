@@ -1,13 +1,38 @@
 class People{
-    String name;
-    int age;
-    boolean gender;
+    private  String name;
+    private  int age;
+    private boolean gender;
 
-    private  void getGoal(){
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+    public void setAge(int  age) {
+        this.age = age;
+    }
+
+    public boolean  getGender() {
+        return gender;
+    }
+    public void setGender(boolean gender) {
+        this.gender = gender;
+    }
+
+
+
+
+
+    public   void getGoal(){
         System.out.println("Célom: Élj a pillanatnak!");
     }
 
-    private  void  introduce()
+    public   void  introduce()
     {
 
         if (gender)
@@ -20,24 +45,24 @@ class People{
     }
 }
 
-public class Modifier{
+public  class Modifier{
     public static void main(String[] args) {
         People pp = new People();
-        pp.age = 18;
-        pp.name = "Laci";
-        pp.gender = true;
+        pp.setAge(18);
+        pp.setName("Laci");
+        pp.setGender(true);
         pp.introduce();
         pp.getGoal();
         People pp2 = new People();
-        pp2.age = 30;
-        pp2.name = "Karolina";
-        pp2.gender = false;
+        pp2.setAge(38);
+        pp2.setName("Karolina");
+        pp2.setGender(false);
         pp2.introduce();
         pp2.getGoal();
         People pp3 = new People();
-        pp3.age = 32;
-        pp3.name = "Norbert";
-        pp3.gender = true;
+        pp3.setAge(12);
+        pp3.setName("Ármin");
+        pp3.setGender(true);
         pp3.introduce();
         pp3.getGoal();
     }
